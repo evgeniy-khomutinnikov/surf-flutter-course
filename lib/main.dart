@@ -103,16 +103,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-class MyFirstWidget extends StatelessWidget {
-  int counter = 0;
-  @override
-  Widget build(BuildContext context) {
-    print('build called ${++counter}');
-    return Container(
-      child: Center(
-        child: Text('Hello!'),
-      ),
-    );
-  }
-}
