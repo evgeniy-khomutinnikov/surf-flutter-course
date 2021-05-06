@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo', // на Android отображается в недавних приложениях
       theme: ThemeData(
         fontFamily: 'Roboto',
         primarySwatch: Colors.blue,
@@ -21,7 +20,9 @@ class MyApp extends StatelessWidget {
 
 // class MyFirstWidget extends StatelessWidget {
 //   int _counter = 0;
-//
+
+//   Type getContextRuntime() => context.runtimeType; // Ошибка сборки - undefined name 'context'
+
 //   @override
 //   Widget build(BuildContext context) {
 //     print('build called ${++_counter}');
@@ -32,7 +33,6 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
-//
 
 class MyFirstWidget extends StatefulWidget {
   @override
@@ -41,6 +41,8 @@ class MyFirstWidget extends StatefulWidget {
 
 class _MyFirstWidgetState extends State<MyFirstWidget> {
   int _counter = 0;
+
+  Type getContextRuntime() => context.runtimeType; // State поддерживает свойство context, доступно для получения
 
   Widget build(BuildContext context) {
     print('build called ${++_counter}');
