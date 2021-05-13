@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ui/screen/sight_list_screen.dart';
 
-void main() => App();
+void main() => runApp(App());
 
 class App extends StatelessWidget {
   static const String _title = 'Places';
