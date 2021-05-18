@@ -12,6 +12,7 @@ class App extends StatelessWidget {
       title: _title,
       theme: ThemeData(
         fontFamily: 'Roboto',
+        backgroundColor: Colors.white,
         primarySwatch: Colors.blue,
       ),
       home: SightListScreen(),
