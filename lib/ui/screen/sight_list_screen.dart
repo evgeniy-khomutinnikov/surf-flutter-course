@@ -17,11 +17,17 @@ class SightListScreenState extends State<SightListScreen> {
         elevation: 0,
         title: Padding(
           padding: EdgeInsets.fromLTRB(16, 40, 0, 0),
-          child: Text(
-            'Список\nинтересных мест',
-            textAlign: TextAlign.left,
-            maxLines: 2,
-            style: TextStyle(fontStyle: FontStyle.normal, fontWeight: FontWeight.bold, fontSize: 32, color: HexColor('#252849')),
+          child: RichText(
+            text: TextSpan(
+              text: '',
+              style: TextStyle(fontStyle: FontStyle.normal, fontWeight: FontWeight.bold, fontSize: 32, color: HexColor('#252849')),
+              children: <TextSpan>[
+                TextSpan(text: 'С', style: TextStyle(color: Colors.green)),
+                TextSpan(text: 'писок\n'),
+                TextSpan(text: 'и', style: TextStyle(color: Colors.yellow)),
+                TextSpan(text: 'нтересных мест'),
+              ],
+            ),
           ),
         ),
         titleSpacing: 0,
