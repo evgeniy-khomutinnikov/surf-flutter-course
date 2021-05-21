@@ -1,10 +1,10 @@
 class Sight {
   String name;
-  double lat;
-  double lon;
+  String lat;
+  String lon;
   String url;
   String details;
-  String type;
+  SightType type;
 
   Sight(
     this.name,
@@ -15,3 +15,5 @@ class Sight {
     this.type,
   );
 }
+
+enum SightType { Nature, Building }
