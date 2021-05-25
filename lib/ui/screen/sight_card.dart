@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:places/domain/sight.dart';
 
 class SightCard extends StatelessWidget {
@@ -37,21 +36,21 @@ class SightCard extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.all(16),
-            color: HexColor('#F5F5F5'),
+            color: Color(0xFFF5F5F5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   _sight.name,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: HexColor('3B3E5B')),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xFF3B3E5B)),
                 ),
                 SizedBox(height: 2),
                 Text(
                   _sight.details.toLowerCase(),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: HexColor('#7C7E92')),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Color(0xFF7C7E92)),
                 ),
               ],
             ),

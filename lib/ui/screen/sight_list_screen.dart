@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:places/mocks.dart';
 import 'package:places/ui/screen/sight_card.dart';
 
@@ -19,7 +18,7 @@ class SightListScreenState extends State<SightListScreen> {
         elevation: 0,
         title: Padding(
           padding: EdgeInsets.fromLTRB(16, 40, 0, 0),
-          child: Text('Список\nинтересных мест', style: TextStyle(fontStyle: FontStyle.normal, fontWeight: FontWeight.bold, fontSize: 32, color: HexColor('3B3E5B'))),
+          child: Text('Список\nинтересных мест', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Color(0xFF3B3E5B))),
         ),
         titleSpacing: 0,
         toolbarHeight: 112,
