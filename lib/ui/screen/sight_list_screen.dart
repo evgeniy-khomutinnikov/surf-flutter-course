@@ -12,17 +12,7 @@ class SightListScreenState extends State<SightListScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Theme.of(context).backgroundColor,
-        elevation: 0,
-        title: Padding(
-          padding: EdgeInsets.fromLTRB(16, 40, 0, 0),
-          child: Text('Список\nинтересных мест', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Color(0xFF3B3E5B))),
-        ),
-        titleSpacing: 0,
-        toolbarHeight: 112,
-      ),
+      appBar: MyAppBar(),
       body: Padding(
         padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
         child: SingleChildScrollView(
@@ -38,6 +28,21 @@ class SightListScreenState extends State<SightListScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  static const double height = 136;
+
+  @override
+  Size get preferredSize => Size.fromHeight(height);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(16, 64, 0, 0),
+      child: Text('Список\nинтересных мест', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Color(0xFF3B3E5B))),
     );
   }
 }
