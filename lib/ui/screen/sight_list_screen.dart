@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:places/mocks.dart';
+import 'package:places/ui/screen/sight_card.dart';
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -17,21 +19,25 @@ class SightListScreenState extends State<SightListScreen> {
         elevation: 0,
         title: Padding(
           padding: EdgeInsets.fromLTRB(16, 40, 0, 0),
-          child: RichText(
-            text: TextSpan(
-              text: '',
-              style: TextStyle(fontStyle: FontStyle.normal, fontWeight: FontWeight.bold, fontSize: 32, color: HexColor('#252849')),
-              children: <TextSpan>[
-                TextSpan(text: 'С', style: TextStyle(color: Colors.green)),
-                TextSpan(text: 'писок\n'),
-                TextSpan(text: 'и', style: TextStyle(color: Colors.yellow)),
-                TextSpan(text: 'нтересных мест'),
-              ],
-            ),
-          ),
+          child: Text('Список\nинтересных мест', style: TextStyle(fontStyle: FontStyle.normal, fontWeight: FontWeight.bold, fontSize: 32, color: HexColor('3B3E5B'))),
         ),
         titleSpacing: 0,
         toolbarHeight: 112,
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SightCard(mocks[0]),
+              SightCard(mocks[1]),
+              SightCard(mocks[2]),
+              SightCard(mocks[0]),
+              SightCard(mocks[1]),
+              SightCard(mocks[2]),
+            ],
+          ),
+        ),
       ),
     );
   }

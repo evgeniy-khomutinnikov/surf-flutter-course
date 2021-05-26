@@ -4,7 +4,7 @@ class Sight {
   String lon;
   String url;
   String details;
-  SightType type;
+  String type;
 
   Sight(
     this.name,
@@ -15,5 +15,3 @@ class Sight {
     this.type,
   );
 }
-
-enum SightType { Nature, Building }
