@@ -16,8 +16,6 @@ dependencies:
 
   flutter_svg: ^0.21.0+1
 
-  hexcolor: ^2.0.3
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -29,3 +27,7 @@ flutter:
     - family: Roboto
       fonts:
         - asset: res/fonts/Roboto/Roboto-Regular.ttf
+        - asset: res/fonts/Roboto/Roboto-Medium.ttf
+          weight: 600
+        - asset: res/fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
