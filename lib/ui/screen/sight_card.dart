@@ -3,6 +3,7 @@ import 'package:places/domain/sight.dart';
 
 class SightCard extends StatelessWidget {
   Sight _sight;
+  static const _borderRadius = Radius.circular(16);
 
   SightCard(this._sight);
 
@@ -13,30 +14,49 @@ class SightCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(16),
-            color: Colors.green.shade500,
             height: 96,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Stack(
+              fit: StackFit.expand,
               children: [
-                Text(
-                  _sight.type,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white),
+                ClipRRect(
+                  borderRadius: BorderRadius.only(topLeft: _borderRadius, topRight: _borderRadius),
+                  child: Image(
+                    image: ExactAssetImage('res/images/sights/${_sight.image}'),
+                    fit: BoxFit.cover,
+                    frameBuilder: (BuildContext context, Widget child, int? frame, bool loaded) {
+                      return frame != null ? child : Center(child: CircularProgressIndicator());
+                    },
+                  ),
                 ),
-                Spacer(),
-                Container(
-                  alignment: Alignment.topRight,
-                  color: Colors.white,
-                  width: 24,
-                  height: 24,
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        _sight.type,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white),
+                      ),
+                      Spacer(),
+                      Container(
+                        alignment: Alignment.topRight,
+                        color: Colors.white,
+                        width: 24,
+                        height: 24,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
           ),
           Container(
             padding: EdgeInsets.all(16),
-            color: Color(0xFFF5F5F5),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(bottomLeft: _borderRadius, bottomRight: _borderRadius),
+              color: Color(0xFFF5F5F5),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

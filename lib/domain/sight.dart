@@ -5,6 +5,7 @@ class Sight {
   String url;
   String details;
   String type;
+  String image;
 
   Sight(
     this.name,
@@ -13,5 +14,6 @@ class Sight {
     this.url,
     this.details,
     this.type,
+    this.image,
   );
 }
