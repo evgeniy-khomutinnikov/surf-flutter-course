@@ -18,7 +18,13 @@ class SightDetailsState extends State<SightDetails> {
         children: [
           Container(
             height: 360,
-            color: Colors.green.shade500,
+            child: Image(
+              image: ExactAssetImage('res/images/sights/${widget.sight.image}'),
+              fit: BoxFit.cover,
+              frameBuilder: (BuildContext context, Widget child, int? frame, bool loaded) {
+                return frame != null ? child : Center(child: CircularProgressIndicator());
+              },
+            ),
           ),
           Expanded(
             child: Container(
