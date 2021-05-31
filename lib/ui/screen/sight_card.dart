@@ -20,8 +20,8 @@ class SightCard extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.only(topLeft: _borderRadius, topRight: _borderRadius),
-                  child: Image(
-                    image: ExactAssetImage('res/images/sights/${_sight.image}'),
+                  child: Image.asset(
+                    'res/images/sights/${_sight.image}',
                     fit: BoxFit.cover,
                     frameBuilder: (BuildContext context, Widget child, int? frame, bool loaded) {
                       return frame != null ? child : Center(child: CircularProgressIndicator());
