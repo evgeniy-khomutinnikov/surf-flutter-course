@@ -18,8 +18,8 @@ class SightDetailsState extends State<SightDetails> {
         children: [
           Container(
             height: 360,
-            child: Image(
-              image: ExactAssetImage('res/images/sights/${widget.sight.image}'),
+            child: Image.asset(
+              'res/images/sights/${widget.sight.image}',
               fit: BoxFit.cover,
               frameBuilder: (BuildContext context, Widget child, int? frame, bool loaded) {
                 return frame != null ? child : Center(child: CircularProgressIndicator());
