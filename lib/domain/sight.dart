@@ -6,6 +6,9 @@ class Sight {
   String details;
   String type;
   String image;
+  bool visited = false;
+  DateTime? visitedDate;
+  DateTime? plannedDate;
 
   Sight(
     this.name,
@@ -14,6 +17,9 @@ class Sight {
     this.url,
     this.details,
     this.type,
-    this.image,
-  );
+    this.image, [
+    this.visited = false,
+    this.visitedDate,
+    this.plannedDate,
+  ]);
 }
