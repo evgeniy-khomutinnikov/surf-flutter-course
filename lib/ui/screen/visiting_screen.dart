@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:places/domain/sight.dart';
 import 'package:places/mocks.dart';
+import 'package:places/ui/screen/bottom_menu.dart';
+import 'bottom_menu.dart';
 import 'colored_tab_bar.dart';
 import 'sight_card.dart';
 
@@ -43,6 +44,7 @@ class VisitingScreen extends StatelessWidget {
             createView(true),
           ],
         ),
+        bottomNavigationBar: BottomMenu(),
       ),
     );
   }
