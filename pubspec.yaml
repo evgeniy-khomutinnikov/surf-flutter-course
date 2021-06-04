@@ -16,6 +16,8 @@ dependencies:
 
   flutter_svg: ^0.21.0+1
 
+  intl: ^0.17.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -31,3 +33,8 @@ flutter:
           weight: 600
         - asset: res/fonts/Roboto/Roboto-Bold.ttf
           weight: 700
+
+  assets:
+    - res/images/sights/
+
+  

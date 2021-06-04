@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:places/domain/sight.dart';
 import 'package:places/mocks.dart';
 import 'colored_tab_bar.dart';
 import 'sight_card.dart';
@@ -38,24 +39,21 @@ class VisitingScreen extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            SingleChildScrollView(
-              padding: EdgeInsets.fromLTRB(16, 30, 16, 30),
-              child: Column(
-                children: <Widget>[
-                  SightCard(mocks[0]),
-                ],
-              ),
-            ),
-            SingleChildScrollView(
-              padding: EdgeInsets.fromLTRB(16, 30, 16, 30),
-              child: Column(
-                children: <Widget>[
-                  SightCard(mocks[0]),
-                ],
-              ),
-            ),
+            createView(false),
+            createView(true),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget createView(bool visitedFilter) {
+    return SingleChildScrollView(
+      padding: EdgeInsets.fromLTRB(16, 38, 16, 30),
+      child: Column(
+        children: <Widget>[
+          for (var i in mocks) i.visited == visitedFilter ? (i.visited ? VisitedSightCard(i) : PlannedSightCard(i)) : Container(),
+        ],
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:places/domain/sight.dart';
 
-final List mocks = [
+final List<Sight> mocks = [
   Sight(
     'Озеро Байкал',
     '53°13′00″ с. ш.',
@@ -8,6 +8,10 @@ final List mocks = [
     'https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B9%D0%BA%D0%B0%D0%BB',
     'Озеро тектонического происхождения в южной части Восточной Сибири, самое глубокое озеро на планете, крупнейший природный резервуар пресной воды и самое большое по площади пресноводное озеро на континенте.',
     'природа',
+    'baikal.jpg',
+    false,
+    null,
+    DateTime.now().add(Duration(days: 7)),
   ),
   Sight(
     'Долина Гейзеров',
@@ -16,6 +20,10 @@ final List mocks = [
     'https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0_%D0%B3%D0%B5%D0%B9%D0%B7%D0%B5%D1%80%D0%BE%D0%B2',
     'Одно из наиболее крупных гейзерных полей в мире. Долина гейзеров расположена на Камчатке в Кроноцком государственном биосферном заповеднике.',
     'природа',
+    'geysers_valley.jpg',
+    false,
+    null,
+    DateTime.now().add(Duration(days: 14)),
   ),
   Sight(
     'Пирамида Хеопса',
@@ -24,5 +32,8 @@ final List mocks = [
     'https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%80%D0%B0%D0%BC%D0%B8%D0%B4%D0%B0_%D0%A5%D0%B5%D0%BE%D0%BF%D1%81%D0%B0',
     'Великая пирамида Гизы — крупнейшая из египетских пирамид, памятник архитектурного искусства Древнего Египта; первое и единственное из «Семи чудес света», сохранившееся до наших дней, и самое древнее из них: её возраст оценивается примерно в 4500 лет.',
     'сооружения',
+    'cheops_pyramid.jpg',
+    true,
+    DateTime.now().add(Duration(days: -14)),
   ),
 ];
