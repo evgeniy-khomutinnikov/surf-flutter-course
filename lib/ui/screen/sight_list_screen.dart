@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
 import 'package:places/ui/screen/sight_card.dart';
 
+import 'bottom_menu.dart';
+
 class SightListScreen extends StatefulWidget {
   @override
   SightListScreenState createState() => SightListScreenState();
@@ -35,6 +37,7 @@ class SightListScreenState extends State<SightListScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomMenu(),
     );
   }
 }
