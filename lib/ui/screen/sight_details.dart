@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 
 class SightDetails extends StatefulWidget {
-  Sight sight;
+  final Sight sight;
 
   SightDetails(this.sight);
 
