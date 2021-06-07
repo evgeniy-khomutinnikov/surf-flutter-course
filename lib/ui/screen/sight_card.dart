@@ -3,7 +3,7 @@ import 'package:places/domain/sight.dart';
 import 'package:intl/intl.dart';
 
 class SightCard extends StatelessWidget {
-  Sight _sight;
+  final Sight _sight;
   static const _borderRadius = Radius.circular(16);
 
   SightCard(this._sight);
